@@ -15,4 +15,9 @@ jobs:
           node-version: '14'
       - run: npm install 
       - run: npm test
+      - run: mkdir build 
+      - uses: actions/upload-artifact@v3
+        with:
+              name: build-artifact
+              path: build
         
